@@ -23,7 +23,6 @@ export default function Navbar() {
   }, []);
 
   // 홈페이지에서만 스크롤에 따른 스타일 변경
-  const isSticky = isHomePage && isScrolled;
   const isTransparent = isHomePage && !isScrolled;
 
   return (
