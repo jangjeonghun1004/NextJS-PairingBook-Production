@@ -228,7 +228,7 @@ export default function HeroSection() {
                     href="/books"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-slate-700 hover:bg-slate-600 md:py-4 md:text-lg md:px-10 transition-colors duration-200"
                   >
-                    시작 하기
+                    시작 하기 change
                   </Link>
                 </div>
               </motion.div>
