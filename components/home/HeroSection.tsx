@@ -169,10 +169,8 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="h-full flex flex-col justify-center items-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-zinc-900">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(51,65,85,0.5),transparent_70%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(15,23,42,0.7),transparent_30%,transparent_70%,rgba(15,23,42,0.7))]" />
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-900 to-slate-800">
+      <div className="absolute inset-0">
         <ParticleEffect />
       </div>
       <div className="text-center px-4 relative z-10">
@@ -228,7 +226,7 @@ export default function HeroSection() {
                     href="/books"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-slate-700 hover:bg-slate-600 md:py-4 md:text-lg md:px-10 transition-colors duration-200"
                   >
-                    시작 하기 change
+                    시작 하기
                   </Link>
                 </div>
               </motion.div>
@@ -236,6 +234,6 @@ export default function HeroSection() {
           )}
         </AnimatePresence>
       </div>
-    </section>
+    </div>
   );
 } 

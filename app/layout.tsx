@@ -6,28 +6,29 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import SessionProvider from "@/components/providers/SessionProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "페어링 BOOK",
-  description: "책에서 시작된 운명적인 만남",
+  title: "PairingBook",
+  description: "책을 통해 만나는 특별한 순간",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
-  const session = await getServerSession(authOptions);
-
+}>) {
   return (
     <html lang="ko">
       <body className={inter.className}>
-        <Navbar session={session} />
-        <Toaster />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        <SessionProvider>
+          <Navbar />
+          <Toaster />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+        </SessionProvider>
       </body>
     </html>
   );
